@@ -19,11 +19,12 @@ virt-install \
 	--name $MACHINE_NAME \
 	--vcpus $MACHINE_CPUS \
 	--memory $VIRT_INSTALL_MEMORY \
-	--disk /tmp/virt/$MACHINE_NAME.img,size=$MACHINE_DISK \
+	--disk $VIRT_PATH_MACHINES/$MACHINE_NAME.img,size=$MACHINE_DISK \
 	--location $VIRT_INSTALL_REMOTE_CENTOS \
+	--network bridge=virbr0 \
 	-x "ks=$KICKSTART" \
 	--noreboot
-	# --noautoconsole
+#	--noautoconsole
 
 
 ### === POSTINSTALL === ###
