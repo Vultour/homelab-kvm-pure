@@ -1,4 +1,5 @@
 #!/bin/bash
+set -u
 
 ### === CONFIG === ###
 DIR=$(dirname "$0")

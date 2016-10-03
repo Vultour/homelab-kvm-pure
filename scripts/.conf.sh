@@ -1,4 +1,5 @@
 #!/bin/bash
+set -u
 
 VIRT_PATH_ROOT="/opt/virt"
 VIRT_PATH_MACHINES="$VIRT_PATH_ROOT/machines"
